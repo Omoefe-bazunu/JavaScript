@@ -13,7 +13,7 @@ const getUsers = async () => {
     userContainer.innerHTML = users
       .map(
         (user) =>
-          `<p class='user'>Username: ${user.login} - Repos: ${user.repos_url}</p>`
+          `<div class='info'><p class='user'>Username: ${user.login}</p><p class='repo'>Repos: ${user.repos_url}</p></div>`
       )
       .join(`\n`);
   } catch (error) {

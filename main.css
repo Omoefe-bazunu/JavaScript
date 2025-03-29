@@ -31,27 +31,59 @@ body {
   background-color: green;
   border: 0;
   border-radius: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 #btn:hover {
   background-color: rgb(4, 78, 4);
 }
 
 #user-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  column-gap: 12px;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  row-gap: 4px;
-  margin-top: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.info {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 1px 2px 2px;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .user {
-  background-color: white;
-  text-align: center;
-  margin: 0;
-  width: 100%;
+  /* background-color: #ffffff; */
+  width: fit-content;
   padding: 4px 8px;
   border: 0;
   border-radius: 2px;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.repo {
+  margin-bottom: 2px;
+  cursor: pointer;
+  margin-top: 0;
+  width: fit-content;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 2px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 8px;
+}
+
+.repo:last-child {
+  border-bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  #user-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
